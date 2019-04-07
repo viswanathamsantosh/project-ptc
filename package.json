@@ -2,19 +2,30 @@
   "name": "create-editor",
   "version": "0.0.1",
   "description": "package for js candidate test",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "npx webpack --config webpack.config.js",
+    "test": "jest"
   },
   "author": "jun",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.13.4",
-    "jquery": "^2.2.3",
+    "jquery": "^2.2.4",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-bundle": "^1.12.1-migrate",
     "junk": "^1.0.2",
     "multer": "^1.1.0",
-    "nodemon": "^1.9.1",
-    "axios": "^0.18.0"
+    "nodemon": "^1.9.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-jest": "^24.7.1",
+    "jest": "^24.7.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
 }

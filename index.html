@@ -3,51 +3,51 @@
 
 <head>
   <title>Canvas</title>
-  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="lib/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="jquery-ui.css">
 </head>
 
 <body>
   <!-- side pane -->
-  <div id="app" class="sidepane col-sm-2 col-md-2 col-lg-2">
-    <div class="form">
-      <h3>Form</h3>
-      <input type="file" v-on:change="fileChange" class="form-control" placeholder="Upload Your Images" name="upload">
-      <button id="submit" v-on:click="onClickUploadImage" class="btn btn-default">upload</button>
-      <!-- Upload Form here -->
+  <div id="app">
+    <div class="sidepane col-sm-2 col-md-2 col-lg-2">
+      <div class="form">
+        <h3>Form</h3>
+        <input type="file" v-on:change="fileChange" class="form-control" placeholder="Upload Your Images" name="upload">
+        <button id="submit" v-on:click="onClickUploadImage" class="btn btn-default">upload</button>
+        <!-- Upload Form here -->
+      </div>
+      <hr />
+      <div class="assets">
+        <h3>Assets</h3>
+        <div class="text">
+          <h4>Text</h4>
+          <button id="addText" v-on:click="addText" class="btn btn-default">Add Text</button>
+        </div>
+        <div class="image">
+          <h4>Images</h4>
+          <ul class="list-unstyled" id="draggable">
+            <!-- List of images here -->
+            <li v-for="item in images"><img v-bind:src="item" class="img-rounded" /></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <hr />
-    <div class="assets">
-      <h3>Assets</h3>
-      <div class="text">
-        <h4>Text</h4>
-        <button id="addText" v-on:click="addText" class="btn btn-default">Add Text</button>
+    <!-- canvas -->
+    <div class="canvas col-sm-8 col-md-8 col-lg-8">
+      <div id="droppable" class="block droppable">
+        <!-- Add images and texts to here -->
       </div>
-      <div class="image">
-        <h4>Images</h4>
-        <ul class="list-unstyled" id="draggable">
-          <!-- List of images here -->
-          <li v-for="item in images"><img v-bind:src="item" class="img-rounded" /></li>
-        </ul>
-      </div>
+      <button v-on:click="saveLayout">Save</button>
     </div>
   </div>
-  <!-- canvas -->
-  <div class="canvas col-sm-8 col-md-8 col-lg-8">
-    <div id="droppable" class="block">
-      <!-- Add images and texts to here -->
-    </div>
-    <div id="deletable" class="delete">
-      <p>Drop here to delete</p>
-      <!-- Drag images and texts here to delete them -->
-    </div>
-  </div>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="jquery-ui.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="lib/jquery.js"></script>
+  <script type="text/javascript" src="lib/jquery-ui.js"></script>
+  <script type="text/javascript" src="lib/vue.js"></script>
+  <script type="text/javascript" src="lib/axios.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <!-- <script type="text/javascript" src="dist/main.js"></script> -->
 </body>
-</html>
 
+</html>

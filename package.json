@@ -18,7 +18,8 @@
     "jquery-ui-bundle": "^1.12.1-migrate",
     "junk": "^1.0.2",
     "multer": "^1.1.0",
-    "nodemon": "^1.9.1"
+    "nodemon": "^1.9.1",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

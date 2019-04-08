@@ -3,8 +3,6 @@ require("jquery-ui-bundle");
 const Vue = require('./lib/vue');
 const axios = require('axios');
 
-
-
 var app = new Vue({
   el: '#app',
   data: {
@@ -65,6 +63,7 @@ var app = new Vue({
     
     // Add editable text element to the canvas area
     addText: function () {
+      debugger;
       let mainDiv = document.createElement('div');
       mainDiv.setAttribute('id', 'draggable-text');
       mainDiv.setAttribute('class', 'dropped draggable-text');

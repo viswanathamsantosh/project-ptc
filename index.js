@@ -1,7 +1,7 @@
-// const $ = require("jquery");
-// require("jquery-ui-bundle");
-// const Vue = require('vue');
-// const axios = require('axios');
+const $ = require("jquery");
+require("jquery-ui-bundle");
+const Vue = require('./lib/vue');
+const axios = require('axios');
 
 
 
@@ -113,4 +113,4 @@ var app = new Vue({
   }
 })
 
-// module.exports = app;
+module.exports = app;

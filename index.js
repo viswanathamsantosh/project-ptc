@@ -38,7 +38,9 @@ var app = new Vue({
       document.getElementById('droppable').innerHTML = localStorage.getItem('elems');
       let elems = document.getElementById('droppable').children;
       for (let i = 0; i < elems.length; i++) {
-        $(elems[i]).draggable();
+        $(elems[i]).draggable({
+          containment: '#droppable'
+        });
       }
     }
   },

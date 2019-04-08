@@ -36,7 +36,9 @@ var app = new Vue({
       document.getElementById('droppable').innerHTML = localStorage.getItem('elems');
       let elems = document.getElementById('droppable').children;
       for (let i = 0; i < elems.length; i++) {
-        $(elems[i]).draggable();
+        $(elems[i]).draggable({
+          containment: '#droppable'
+        });
       }
     }
   },
@@ -63,7 +65,6 @@ var app = new Vue({
     
     // Add editable text element to the canvas area
     addText: function () {
-      debugger;
       let mainDiv = document.createElement('div');
       mainDiv.setAttribute('id', 'draggable-text');
       mainDiv.setAttribute('class', 'dropped draggable-text');

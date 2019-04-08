@@ -69,17 +69,21 @@ var app = new Vue({
       mainDiv.setAttribute('class', 'dropped draggable-text');
       
       // create a text editable div
-      let ele = document.createElement('div');
+      let ele = document.createElement('p');
+      ele.setAttribute('class', 'editable-text')
       ele.setAttribute('contenteditable', 'true');
       ele.innerText = 'This text can be edited by the user';
-
+      ele.setAttribute('onclick', '$(this).focus();');
+      
       // add a close button to the dropped text field 
       var el = document.createElement('span');
       el.innerHTML = "<a href='Javascript:void(0)' class='xicon delete-button' title='Remove'>X</a>";
       mainDiv.appendChild(el);
       mainDiv.appendChild(ele);
       document.getElementById('droppable').appendChild(mainDiv);
-      $('#draggable-text').draggable(); // make the text draggable
+      $('#draggable-text').draggable({
+        containment: '#droppable'
+      }); // make the text draggable
       $('.delete-button').on('click', function () {
         $(this).parent().parent().remove();
       });

@@ -92,6 +92,10 @@ body {
 
 .draggable-text {
   width: 50%;
+  float: left;
+}
+.editable-text {
+  float: left;
 }
 
 .xicon {

@@ -13,7 +13,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.13.4",
-    "jquery": "^2.2.4",
+    "jquery": "^3.4.0",
     "jquery-ui": "^1.12.1",
     "jquery-ui-bundle": "^1.12.1-migrate",
     "junk": "^1.0.2",
